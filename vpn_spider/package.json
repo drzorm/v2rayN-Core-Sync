@@ -6,7 +6,7 @@
   "author": "drzorm <drzorm@qq.com>",
   "license": "MIT",
   "scripts": {
-    "start": "node --experimental-json-modules index.mjs"
+    "start": "node --experimental-json-modules index.mjs --push"
   },
   "dependencies": {
     "clipboardy": "^2.3.0",
