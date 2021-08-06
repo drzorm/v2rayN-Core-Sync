@@ -18,7 +18,7 @@ const intl = new Intl.DateTimeFormat("zh", {
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const latestFilePath = resolve(__dirname, "./.latest");
 
-cd(__dirname);
+cd(resolve(__dirname, ".."));
 
 if (argv.push) await $`git pull`;
 
