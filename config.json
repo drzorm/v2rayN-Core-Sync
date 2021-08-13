@@ -32,30 +32,38 @@
   "outbounds": [
     {
       "tag": "proxy",
-      "protocol": "shadowsocks",
+      "protocol": "vmess",
       "settings": {
-        "vnext": null,
-        "servers": [
+        "vnext": [
           {
-            "email": null,
-            "address": "45.248.79.67",
-            "method": "aes-256-gcm",
-            "ota": false,
-            "password": "WCuz7yrfZSCQQXSNrtGPz2HT",
-            "port": 50168,
-            "level": 1,
-            "users": null
+            "address": "zf.proxypools.top",
+            "port": 33826,
+            "users": [
+              {
+                "id": "e73edc5d-2eef-47c1-a2e3-6d202e3478bf",
+                "alterId": 1,
+                "email": "t@t.tt",
+                "security": "auto",
+                "encryption": null,
+                "flow": null
+              }
+            ]
           }
         ],
+        "servers": null,
         "response": null
       },
       "streamSettings": {
-        "network": "tcp",
+        "network": "ws",
         "security": null,
         "tlsSettings": null,
         "tcpSettings": null,
         "kcpSettings": null,
-        "wsSettings": null,
+        "wsSettings": {
+          "connectionReuse": true,
+          "path": "/shenseven",
+          "headers": null
+        },
         "httpSettings": null,
         "quicSettings": null,
         "xtlsSettings": null
