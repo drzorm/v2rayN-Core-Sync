@@ -32,30 +32,43 @@
   "outbounds": [
     {
       "tag": "proxy",
-      "protocol": "shadowsocks",
+      "protocol": "vmess",
       "settings": {
-        "vnext": null,
-        "servers": [
+        "vnext": [
           {
-            "email": null,
-            "address": "81.19.208.107",
-            "method": "aes-256-gcm",
-            "ota": false,
-            "password": "WCuz7yrfZSCQQXSNrtGPz2HT",
-            "port": 50168,
-            "level": 1,
-            "users": null
+            "address": "hostmonit.com",
+            "port": 443,
+            "users": [
+              {
+                "id": "3b5e258e-8c5e-45d3-b7d2-02c8f5fc0bb2",
+                "alterId": 64,
+                "email": "t@t.tt",
+                "security": "auto",
+                "encryption": null,
+                "flow": null
+              }
+            ]
           }
         ],
+        "servers": null,
         "response": null
       },
       "streamSettings": {
-        "network": "tcp",
-        "security": null,
-        "tlsSettings": null,
+        "network": "ws",
+        "security": "tls",
+        "tlsSettings": {
+          "allowInsecure": false,
+          "serverName": "cdnde.irteyz.today"
+        },
         "tcpSettings": null,
         "kcpSettings": null,
-        "wsSettings": null,
+        "wsSettings": {
+          "connectionReuse": true,
+          "path": "/",
+          "headers": {
+            "Host": "cdnde.irteyz.today"
+          }
+        },
         "httpSettings": null,
         "quicSettings": null,
         "xtlsSettings": null
