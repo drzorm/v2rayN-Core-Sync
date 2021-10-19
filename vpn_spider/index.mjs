@@ -86,7 +86,11 @@ vpns = [...new Set(vpns)];
 if (vpns.length) {
   const txt = vpns.join("\n");
   clipboardy.writeSync(txt);
-  fs.writeFileSync(resolve(__dirname, "./vpns.txt"), txt, "utf8");
+  fs.writeFileSync(
+    resolve(__dirname, "./vpns.txt"),
+    JSON.stringify(vpns),
+    "utf8"
+  );
 
   // 生成订阅链接
   fs.writeFileSync(resolve(__dirname, "./rss.txt"), Buffer.from(txt, "utf8").toString("base64"), "utf8");
