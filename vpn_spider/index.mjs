@@ -16,16 +16,13 @@ const intl = new Intl.DateTimeFormat("zh", {
 });
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
-console.log(`__dirname :>> `, __dirname);
 const latestFilePath = resolve(__dirname, "./.latest");
-console.log(`latestFilePath :>> `, latestFilePath);
 
 cd(resolve(__dirname, ".."));
 
 if (argv.push) await $`git pull`;
 
 const latest = (() => {
-  console.log(fs.existsSync(latestFilePath));
   if (!fs.existsSync(latestFilePath)) {
     const date = new Date();
     date.setDate(date.getDate() - 3);
@@ -34,11 +31,9 @@ const latest = (() => {
     return date;
   }
 
-  let date = fs.readFileSync(latestFilePath, "utf8");
-  console.log(`date :>> `, date);
+  let date = fs.readFileSync(latestFilePath, "utf8").trim();
   return date ? new Date(date) : new Date();
 })();
-console.log(`latest :>> `, latest);
 
 const link = "https://www.mattkaydiary.com/search/label/vpn?max-results=50";
 
@@ -68,19 +63,22 @@ let posts = await page.evaluate(() => {
 
 
 posts = posts.filter((post) => post.date > latest);
-console.log(posts)
 
 let vpns = getVpns();
 
 for await (const post of posts) {
   console.log(`[${intl.format(post.date)}]${post.title}`);
-  await page.goto(post.href, { timeout: 300000 });
-  const vpn = await page.evaluate(() => {
-    const content = document.querySelector(".post-body").innerHTML;
-    return content.match(/(ss|trojan|vmess):[^<]+/g) || [];
-  });
+  try {
+    await page.goto(post.href, { timeout: 300000 });
+    const vpn = await page.evaluate(() => {
+      const content = document.querySelector(".post-body").innerHTML;
+      return content.match(/(ss|trojan|vmess):[^<]+/g) || [];
+    });
 
-  vpns.push(...vpn);
+    vpns.push(...vpn);
+  } catch (e) {
+    console.error(`${post.href} load error:`, e);
+  }
 }
 
 vpns = [...new Set(vpns)];

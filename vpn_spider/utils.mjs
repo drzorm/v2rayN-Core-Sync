@@ -13,4 +13,6 @@ function getIpv6(ip) {
 export function getVpns() {
   const guiNConfig = JSON.parse(fs.readFileSync(guiNConfigFilePath, "utf8"));
   const vmess = guiNConfig.vmess || [];
+
+  return vmess;
 }
