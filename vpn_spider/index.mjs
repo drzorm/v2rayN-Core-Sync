@@ -16,13 +16,16 @@ const intl = new Intl.DateTimeFormat("zh", {
 });
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
+console.log(`__dirname :>> `, __dirname);
 const latestFilePath = resolve(__dirname, "./.latest");
+console.log(`latestFilePath :>> `, latestFilePath);
 
 cd(resolve(__dirname, ".."));
 
 if (argv.push) await $`git pull`;
 
 const latest = (() => {
+  console.log(fs.existsSync(latestFilePath));
   if (!fs.existsSync(latestFilePath)) {
     const date = new Date();
     date.setDate(date.getDate() - 3);
@@ -32,8 +35,10 @@ const latest = (() => {
   }
 
   let date = fs.readFileSync(latestFilePath, "utf8");
+  console.log(`date :>> `, date);
   return date ? new Date(date) : new Date();
 })();
+console.log(`latest :>> `, latest);
 
 const link = "https://www.mattkaydiary.com/search/label/vpn?max-results=50";
 
@@ -63,6 +68,7 @@ let posts = await page.evaluate(() => {
 
 
 posts = posts.filter((post) => post.date > latest);
+console.log(posts)
 
 let vpns = getVpns();
 
