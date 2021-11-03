@@ -1,5 +1,4 @@
 {
-  "policy": null,
   "log": {
     "access": "",
     "error": "",
@@ -7,7 +6,7 @@
   },
   "inbounds": [
     {
-      "tag": "proxy",
+      "tag": "socks",
       "port": 10808,
       "listen": "0.0.0.0",
       "protocol": "socks",
@@ -21,12 +20,25 @@
       "settings": {
         "auth": "noauth",
         "udp": true,
-        "ip": null,
-        "address": null,
-        "clients": null,
-        "decryption": null
+        "allowTransparent": false
+      }
+    },
+    {
+      "tag": "http",
+      "port": 10809,
+      "listen": "0.0.0.0",
+      "protocol": "http",
+      "sniffing": {
+        "enabled": true,
+        "destOverride": [
+          "http",
+          "tls"
+        ]
       },
-      "streamSettings": null
+      "settings": {
+        "udp": false,
+        "allowTransparent": false
+      }
     }
   ],
   "outbounds": [
@@ -34,31 +46,19 @@
       "tag": "proxy",
       "protocol": "shadowsocks",
       "settings": {
-        "vnext": null,
         "servers": [
           {
-            "email": null,
             "address": "134.195.196.60",
             "method": "aes-256-gcm",
             "ota": false,
             "password": "FoOiGlkAA9yPEGP",
             "port": 7306,
-            "level": 1,
-            "users": null
+            "level": 1
           }
-        ],
-        "response": null
+        ]
       },
       "streamSettings": {
-        "network": "tcp",
-        "security": null,
-        "tlsSettings": null,
-        "tcpSettings": null,
-        "kcpSettings": null,
-        "wsSettings": null,
-        "httpSettings": null,
-        "quicSettings": null,
-        "xtlsSettings": null
+        "network": "tcp"
       },
       "mux": {
         "enabled": false,
@@ -68,43 +68,50 @@
     {
       "tag": "direct",
       "protocol": "freedom",
-      "settings": {
-        "vnext": null,
-        "servers": null,
-        "response": null
-      },
-      "streamSettings": null,
-      "mux": null
+      "settings": {}
     },
     {
       "tag": "block",
       "protocol": "blackhole",
       "settings": {
-        "vnext": null,
-        "servers": null,
         "response": {
           "type": "http"
         }
-      },
-      "streamSettings": null,
-      "mux": null
+      }
     }
   ],
-  "stats": null,
-  "api": null,
-  "dns": null,
   "routing": {
     "domainStrategy": "IPIfNonMatch",
+    "domainMatcher": "linear",
     "rules": [
       {
         "type": "field",
-        "port": null,
         "inboundTag": [
           "api"
         ],
-        "outboundTag": "api",
-        "ip": null,
-        "domain": null
+        "outboundTag": "api"
+      },
+      {
+        "type": "field",
+        "outboundTag": "proxy",
+        "domain": [
+          "geosite:google"
+        ]
+      },
+      {
+        "type": "field",
+        "outboundTag": "direct",
+        "domain": [
+          "domain:example-example.com",
+          "domain:example-example2.com"
+        ]
+      },
+      {
+        "type": "field",
+        "outboundTag": "block",
+        "domain": [
+          "geosite:category-ads-all"
+        ]
       }
     ]
   }

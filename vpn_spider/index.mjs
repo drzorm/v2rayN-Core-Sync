@@ -35,6 +35,7 @@ const latest = (() => {
   return date ? new Date(date) : new Date();
 })();
 
+// https://www.iyio.net/search/label/%E5%85%8D%E8%B4%B9%E8%8A%82%E7%82%B9
 const link = "https://www.mattkaydiary.com/search/label/vpn?max-results=50";
 
 const browser = await chromium.launch({
@@ -93,6 +94,7 @@ if (vpns.length) {
   );
 
   // 生成订阅链接
+
   fs.writeFileSync(resolve(__dirname, "./rss.txt"), Buffer.from(txt, "utf8").toString("base64"), "utf8");
 }
 
