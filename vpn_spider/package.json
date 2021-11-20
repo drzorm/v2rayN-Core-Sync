@@ -5,6 +5,7 @@
   "repository": "git@github.com:drzorm/vpn_spider.git",
   "author": "drzorm <drzorm@qq.com>",
   "license": "MIT",
+  "module": "esnext",
   "scripts": {
     "start": "node --experimental-json-modules index.mjs --push"
   },
