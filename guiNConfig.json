@@ -946,11 +946,11 @@
     }
   ],
   "uiItem": {
-    "mainSize": "160, 28",
+    "mainSize": "912, 765",
     "mainLvColWidth": {
       "def": 30,
       "configType": 68,
-      "remarks": 342,
+      "remarks": 172,
       "address": 111,
       "port": 50,
       "security": 90,

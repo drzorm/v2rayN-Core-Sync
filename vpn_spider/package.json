@@ -5,9 +5,10 @@
   "repository": "git@github.com:drzorm/vpn_spider.git",
   "author": "drzorm <drzorm@qq.com>",
   "license": "MIT",
-  "module": "esnext",
+  "type": "module",
   "scripts": {
-    "start": "node --experimental-json-modules index.mjs --push"
+    "debugger": "node --experimental-json-modules index.js",
+    "start": "node --experimental-json-modules index.js --push"
   },
   "dependencies": {
     "clipboardy": "^2.3.0",
