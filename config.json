@@ -48,11 +48,11 @@
       "settings": {
         "servers": [
           {
-            "address": "118.107.244.112",
+            "address": "198.57.27.218",
             "method": "aes-256-gcm",
             "ota": false,
-            "password": "PCnnH6SQSnfoS27",
-            "port": 8091,
+            "password": "FoOiGlkAA9yPEGP",
+            "port": 7306,
             "level": 1
           }
         ]
