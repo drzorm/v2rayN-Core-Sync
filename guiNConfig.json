@@ -9,7 +9,7 @@
   ],
   "logEnabled": false,
   "loglevel": "warning",
-  "index": 0,
+  "index": 2,
   "vmess": [
     {
       "configVersion": 2,
@@ -26,7 +26,7 @@
       "streamSecurity": "",
       "allowInsecure": "",
       "configType": 3,
-      "testResult": " 2.1 M/s",
+      "testResult": " 0.0 M/s",
       "subid": "",
       "flow": "",
       "sni": null
@@ -46,7 +46,7 @@
       "streamSecurity": "",
       "allowInsecure": "",
       "configType": 3,
-      "testResult": " 2.0 M/s",
+      "testResult": "    操作超时",
       "subid": "",
       "flow": "",
       "sni": null
@@ -66,7 +66,7 @@
       "streamSecurity": "",
       "allowInsecure": "",
       "configType": 3,
-      "testResult": " 1.8 M/s",
+      "testResult": " 2.2 M/s",
       "subid": "",
       "flow": "",
       "sni": null
@@ -86,7 +86,7 @@
       "streamSecurity": "",
       "allowInsecure": "False",
       "configType": 1,
-      "testResult": " 1.7 M/s",
+      "testResult": "基础连接已经关闭: 发送时发生错误。",
       "subid": "",
       "flow": "",
       "sni": ""
@@ -106,7 +106,7 @@
       "streamSecurity": "",
       "allowInsecure": "",
       "configType": 3,
-      "testResult": " 1.7 M/s",
+      "testResult": "    操作超时",
       "subid": "",
       "flow": "",
       "sni": null
@@ -126,7 +126,7 @@
       "streamSecurity": "",
       "allowInsecure": "",
       "configType": 3,
-      "testResult": " 1.6 M/s",
+      "testResult": "    操作超时",
       "subid": "",
       "flow": "",
       "sni": null
@@ -146,7 +146,7 @@
       "streamSecurity": "",
       "allowInsecure": "",
       "configType": 3,
-      "testResult": " 1.6 M/s",
+      "testResult": "    操作超时",
       "subid": "",
       "flow": "",
       "sni": null
@@ -166,7 +166,7 @@
       "streamSecurity": "",
       "allowInsecure": "",
       "configType": 3,
-      "testResult": " 1.5 M/s",
+      "testResult": "",
       "subid": "",
       "flow": "",
       "sni": null
@@ -186,7 +186,7 @@
       "streamSecurity": "",
       "allowInsecure": "",
       "configType": 3,
-      "testResult": " 1.4 M/s",
+      "testResult": "",
       "subid": "",
       "flow": "",
       "sni": null
