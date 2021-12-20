@@ -48,12 +48,12 @@
       "settings": {
         "vnext": [
           {
-            "address": "armsj2.kozow.com",
-            "port": 80,
+            "address": "usa-dallas.lvuft.com",
+            "port": 443,
             "users": [
               {
-                "id": "44e0d410-535a-11ec-968f-02001700aa14",
-                "alterId": 0,
+                "id": "aba50dd4-5484-3b05-b14a-4661caf862d5",
+                "alterId": 4,
                 "email": "t@t.tt",
                 "security": "auto"
               }
@@ -63,7 +63,17 @@
       },
       "streamSettings": {
         "network": "ws",
-        "wsSettings": {}
+        "security": "tls",
+        "tlsSettings": {
+          "allowInsecure": false,
+          "serverName": "usa-dallas.lvuft.com"
+        },
+        "wsSettings": {
+          "path": "/ws",
+          "headers": {
+            "Host": "usa-dallas.lvuft.com"
+          }
+        }
       },
       "mux": {
         "enabled": false,
