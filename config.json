@@ -48,14 +48,14 @@
       "settings": {
         "vnext": [
           {
-            "address": "usa-dallas.lvuft.com",
-            "port": 443,
+            "address": "us1nhg-node.aiqiche123.com",
+            "port": 13723,
             "users": [
               {
-                "id": "aba50dd4-5484-3b05-b14a-4661caf862d5",
-                "alterId": 4,
+                "id": "a90597c1-bab3-4217-ad6f-0838675c8634",
+                "alterId": 10,
                 "email": "t@t.tt",
-                "security": "auto"
+                "security": "aes-128-gcm"
               }
             ]
           }
@@ -65,14 +65,10 @@
         "network": "ws",
         "security": "tls",
         "tlsSettings": {
-          "allowInsecure": false,
-          "serverName": "usa-dallas.lvuft.com"
+          "allowInsecure": false
         },
         "wsSettings": {
-          "path": "/ws",
-          "headers": {
-            "Host": "usa-dallas.lvuft.com"
-          }
+          "path": "ray"
         }
       },
       "mux": {

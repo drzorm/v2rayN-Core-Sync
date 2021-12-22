@@ -55,7 +55,7 @@ export function getShareUrl({
   sni = "",
 }) {
   let url = "";
-  const remark = remarks ? `#${Base64.encode(remarks)}` : "";
+  const remark = remarks ? `#${encodeURIComponent(remarks)}` : "";
 
   switch (configType) {
     case ConfigType.vmess:
