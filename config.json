@@ -48,12 +48,12 @@
       "settings": {
         "vnext": [
           {
-            "address": "us1nhg-node.aiqiche123.com",
-            "port": 13723,
+            "address": "198.41.212.234",
+            "port": 2082,
             "users": [
               {
-                "id": "a90597c1-bab3-4217-ad6f-0838675c8634",
-                "alterId": 10,
+                "id": "68188cc4-0e87-4da8-cd67-7c6dbcaccf6f",
+                "alterId": 0,
                 "email": "t@t.tt",
                 "security": "aes-128-gcm"
               }
@@ -63,12 +63,11 @@
       },
       "streamSettings": {
         "network": "ws",
-        "security": "tls",
-        "tlsSettings": {
-          "allowInsecure": false
-        },
         "wsSettings": {
-          "path": "ray"
+          "path": "/media/",
+          "headers": {
+            "Host": "download.jianguoyun.com"
+          }
         }
       },
       "mux": {
