@@ -44,31 +44,21 @@
   "outbounds": [
     {
       "tag": "proxy",
-      "protocol": "vmess",
+      "protocol": "shadowsocks",
       "settings": {
-        "vnext": [
+        "servers": [
           {
-            "address": "198.41.212.234",
-            "port": 2082,
-            "users": [
-              {
-                "id": "68188cc4-0e87-4da8-cd67-7c6dbcaccf6f",
-                "alterId": 0,
-                "email": "t@t.tt",
-                "security": "aes-128-gcm"
-              }
-            ]
+            "address": "172.99.190.87",
+            "method": "aes-256-gcm",
+            "ota": false,
+            "password": "faBAoD54k87UJG7",
+            "port": 2375,
+            "level": 1
           }
         ]
       },
       "streamSettings": {
-        "network": "ws",
-        "wsSettings": {
-          "path": "/media/",
-          "headers": {
-            "Host": "download.jianguoyun.com"
-          }
-        }
+        "network": "tcp"
       },
       "mux": {
         "enabled": false,
