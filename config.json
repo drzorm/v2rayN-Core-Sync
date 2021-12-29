@@ -44,21 +44,31 @@
   "outbounds": [
     {
       "tag": "proxy",
-      "protocol": "shadowsocks",
+      "protocol": "vmess",
       "settings": {
-        "servers": [
+        "vnext": [
           {
-            "address": "172.99.190.87",
-            "method": "aes-256-gcm",
-            "ota": false,
-            "password": "faBAoD54k87UJG7",
-            "port": 2375,
-            "level": 1
+            "address": "146.56.177.34",
+            "port": 80,
+            "users": [
+              {
+                "id": "fbf53107-1b42-3da5-a77d-6ad22544c0e9",
+                "alterId": 2,
+                "email": "t@t.tt",
+                "security": "auto"
+              }
+            ]
           }
         ]
       },
       "streamSettings": {
-        "network": "tcp"
+        "network": "ws",
+        "wsSettings": {
+          "path": "/v2ray",
+          "headers": {
+            "Host": "t.me/vpnhat"
+          }
+        }
       },
       "mux": {
         "enabled": false,
