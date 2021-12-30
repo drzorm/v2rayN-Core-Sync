@@ -48,14 +48,14 @@
       "settings": {
         "vnext": [
           {
-            "address": "usa-dallas.lvuft.com",
-            "port": 443,
+            "address": "172.104.98.216",
+            "port": 80,
             "users": [
               {
-                "id": "aba50dd4-5484-3b05-b14a-4661caf862d5",
-                "alterId": 4,
+                "id": "e5af0cad-295c-37b2-b601-f35d13f6b1bb",
+                "alterId": 64,
                 "email": "t@t.tt",
-                "security": "auto"
+                "security": "aes-128-gcm"
               }
             ]
           }
@@ -63,15 +63,10 @@
       },
       "streamSettings": {
         "network": "ws",
-        "security": "tls",
-        "tlsSettings": {
-          "allowInsecure": false,
-          "serverName": "usa-dallas.lvuft.com"
-        },
         "wsSettings": {
-          "path": "/ws",
+          "path": "/",
           "headers": {
-            "Host": "usa-dallas.lvuft.com"
+            "Host": "www.gov.hk"
           }
         }
       },
