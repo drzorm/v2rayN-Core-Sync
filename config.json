@@ -48,12 +48,12 @@
       "settings": {
         "vnext": [
           {
-            "address": "146.56.177.34",
-            "port": 80,
+            "address": "usa-dallas.lvuft.com",
+            "port": 443,
             "users": [
               {
-                "id": "fbf53107-1b42-3da5-a77d-6ad22544c0e9",
-                "alterId": 2,
+                "id": "aba50dd4-5484-3b05-b14a-4661caf862d5",
+                "alterId": 4,
                 "email": "t@t.tt",
                 "security": "auto"
               }
@@ -63,10 +63,15 @@
       },
       "streamSettings": {
         "network": "ws",
+        "security": "tls",
+        "tlsSettings": {
+          "allowInsecure": false,
+          "serverName": "usa-dallas.lvuft.com"
+        },
         "wsSettings": {
-          "path": "/v2ray",
+          "path": "/ws",
           "headers": {
-            "Host": "t.me/vpnhat"
+            "Host": "usa-dallas.lvuft.com"
           }
         }
       },
