@@ -48,14 +48,14 @@
       "settings": {
         "vnext": [
           {
-            "address": "172.104.98.216",
-            "port": 80,
+            "address": "www.ltzs.buzz",
+            "port": 443,
             "users": [
               {
-                "id": "e5af0cad-295c-37b2-b601-f35d13f6b1bb",
-                "alterId": 64,
+                "id": "d0ce51d5-b4de-4f99-ac7c-c5c1a123bd94",
+                "alterId": 0,
                 "email": "t@t.tt",
-                "security": "aes-128-gcm"
+                "security": "auto"
               }
             ]
           }
@@ -63,10 +63,15 @@
       },
       "streamSettings": {
         "network": "ws",
+        "security": "tls",
+        "tlsSettings": {
+          "allowInsecure": false,
+          "serverName": "www.ltzs.buzz"
+        },
         "wsSettings": {
-          "path": "/",
+          "path": "/bb2b34a1",
           "headers": {
-            "Host": "www.gov.hk"
+            "Host": "www.ltzs.buzz"
           }
         }
       },
