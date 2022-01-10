@@ -44,36 +44,21 @@
   "outbounds": [
     {
       "tag": "proxy",
-      "protocol": "vmess",
+      "protocol": "shadowsocks",
       "settings": {
-        "vnext": [
+        "servers": [
           {
-            "address": "www.ltzs.buzz",
+            "address": "38.143.66.71",
+            "method": "aes-256-gcm",
+            "ota": false,
+            "password": "pKEW8JPByTVTLtM",
             "port": 443,
-            "users": [
-              {
-                "id": "d0ce51d5-b4de-4f99-ac7c-c5c1a123bd94",
-                "alterId": 0,
-                "email": "t@t.tt",
-                "security": "auto"
-              }
-            ]
+            "level": 1
           }
         ]
       },
       "streamSettings": {
-        "network": "ws",
-        "security": "tls",
-        "tlsSettings": {
-          "allowInsecure": false,
-          "serverName": "www.ltzs.buzz"
-        },
-        "wsSettings": {
-          "path": "/bb2b34a1",
-          "headers": {
-            "Host": "www.ltzs.buzz"
-          }
-        }
+        "network": "tcp"
       },
       "mux": {
         "enabled": false,
