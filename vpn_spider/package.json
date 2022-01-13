@@ -7,8 +7,8 @@
   "license": "MIT",
   "type": "module",
   "scripts": {
-    "debugger": "node --experimental-json-modules index.js",
-    "start": "node --experimental-json-modules index.js --push"
+    "debugger": "zx ./index.js",
+    "start": "zx ./index.js --push"
   },
   "dependencies": {
     "clipboardy": "^2.3.0",

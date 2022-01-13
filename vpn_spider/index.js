@@ -92,6 +92,7 @@ for await (const link of links) {
 }
 
 let vpns = getVpns();
+console.log(`vpns :>> `, vpns);
 
 for await (const post of posts) {
   // console.log(`[${intl.format(post.date)}]${post.title}`);
@@ -108,6 +109,7 @@ for await (const post of posts) {
     });
 
     vpns.push(...vpn);
+
   } catch (e) {
     console.error(`${post.href} load error:`, e);
   }
