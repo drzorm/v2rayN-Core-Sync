@@ -1517,6 +1517,18 @@
       "remarks": "vpn_spider",
       "url": "http://192.168.100.138:18008/rss.txt",
       "enabled": true
+    },
+    {
+      "id": "73d236fa-8b95-4292-9eb5-5a74f3ae9765",
+      "remarks": "Free-Node-Merge-1",
+      "url": "https://dweb.link/ipns/k51qzi5uqu5dlfnig6lej7l7aes2d5oed6a4435s08ccftne1hq09ac1bulz2f/node.txt",
+      "enabled": true
+    },
+    {
+      "id": "f48db873-d4a7-4a1b-b9b1-b47e4de309d9",
+      "remarks": "emzv2ray",
+      "url": "https://git.io/emzv2ray",
+      "enabled": true
     }
   ],
   "uiItem": {
