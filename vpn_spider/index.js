@@ -85,9 +85,11 @@ for await (const link of links) {
       });
     });
   }
-  plist = plist.filter((post) => {
-    return post.date > latest;
-  });
+  plist = plist
+    .filter((post) => {
+      return post.date > latest;
+    })
+    .sort((a, b) => b.date.getTime() - a.date.getTime());
   posts.push(...plist);
 }
 
@@ -109,7 +111,6 @@ for await (const post of posts) {
     });
 
     vpns.push(...vpn);
-
   } catch (e) {
     console.error(`${post.href} load error:`, e);
   }
